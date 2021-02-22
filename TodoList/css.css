@@ -1,0 +1,31 @@
+body{
+    background-color: #ce8703;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.search{
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.list-group{
+width: 100%;
+align-items: center;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+}
+.add{
+    width: 100%;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: center;
+}
