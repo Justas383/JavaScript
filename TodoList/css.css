@@ -22,10 +22,16 @@ display: flex;
 flex-direction: column;
 flex-wrap: wrap;
 }
+.list-group-item{
+    border:solid 2px lightblue;
+}
 .add{
     width: 100%;
 display: flex;
 flex-wrap: wrap;
 flex-direction: column;
 justify-content: center;
+}
+.delete:hover{
+cursor: pointer;
 }
