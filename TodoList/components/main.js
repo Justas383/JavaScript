@@ -1,6 +1,6 @@
 const addForm = document.querySelector('.add');
 const list = document.querySelector('.list-group');
-const search = document.querySelector('.search input');
+const search = document.querySelector('header .search  input');
 
 const generateTemplate = todo => {
 const html = `<li class="list-group-item">
@@ -28,17 +28,22 @@ if(e.target.classList.contains('delete')){
 }
 });
 
-const filterTodos = (term) => {
-(Array.from(list.children) //is html kolekcijos mes padarome array, kad butu galima naudoti array metodus.
-.filter((todo) =>{
-    //return todo.textContent
-    console.log(todo.textContent);
-    return true;
-})
+
+const filterTodos = term => {
+Array.from(list.children) //is html kolekcijos mes padarome array, kad butu galima naudoti array metodus.
+.filter((todo) => !todo.textContent.includes(term))
+.forEach((todo) => todo.classList.add('filtered'));
+
+Array.from(list.children) //is html kolekcijos mes padarome array, kad butu galima naudoti array metodus.
+.filter((todo) => !todo.textContent.includes(term))
+.forEach((todo) => todo.classList.remove('filtered'));
+
+
 };
+
 
 search.addEventListener('keyup',() => {
 const term = search.value.trim();
 filterTodos(term);
 
-})
+});

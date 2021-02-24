@@ -35,3 +35,6 @@ justify-content: center;
 .delete:hover{
 cursor: pointer;
 }
+.filtered{
+    display: none !important;
+}
