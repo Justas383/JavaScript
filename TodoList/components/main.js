@@ -1,5 +1,6 @@
 const addForm = document.querySelector('.add');
-const list = document.querySelector('.list-group')
+const list = document.querySelector('.list-group');
+const search = document.querySelector('.search input');
 
 const generateTemplate = todo => {
 const html = `<li class="list-group-item">
@@ -26,3 +27,10 @@ if(e.target.classList.contains('delete')){
     e.target.parentElement.remove();
 }
 });
+
+
+
+search.addEventListener('keyup',() => {
+const term = search.value.trim();
+
+})
