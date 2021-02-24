@@ -28,9 +28,17 @@ if(e.target.classList.contains('delete')){
 }
 });
 
-
+const filterTodos = (term) => {
+(Array.from(list.children) //is html kolekcijos mes padarome array, kad butu galima naudoti array metodus.
+.filter((todo) =>{
+    //return todo.textContent
+    console.log(todo.textContent);
+    return true;
+})
+};
 
 search.addEventListener('keyup',() => {
 const term = search.value.trim();
+filterTodos(term);
 
 })
